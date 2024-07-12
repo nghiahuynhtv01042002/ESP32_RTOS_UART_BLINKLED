@@ -1,0 +1,768 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400815ea: panic_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x400857c1: esp_system_abort at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008b205: __assert_func at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x40085e3e: xQueueSemaphoreTake at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40085f5a: xQueueTakeMutexRecursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40082665: lock_acquire_generic at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:144
+0x4008276d: _lock_acquire_recursive at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:158
+0x400d5297: uart_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:209
+0x400d4143: console_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d3cce: esp_vfs_write at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x400d8591: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x400dc4cb: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x400dbe8e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x400d8613: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+0x400d531e: blink_task at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/examples/My_Project/RTOS_led_uart/main/main.c:14 (discriminator 4)
+0x40086025: vPortTaskWrapper at G:/esp_IDF/esp32_idf/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
+Traceback (most recent call last):
+  File "G:\esp_IDF\esp32_idf\Espressif\frameworks\esp-idf-v5.2.2\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt
